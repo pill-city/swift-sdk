@@ -27,9 +27,6 @@ open class PluginsAPI {
      - GET /plugin/cloudemoticon/emoticons
      - 
 
-     - :
-       - type: http
-       - name: bearer
      - examples: [{contentType=application/json, example={
   "information" : [ "KTachibana", "https://ktachibana.party/cloudemoticon/default.json" ],
   "categories" : [ {

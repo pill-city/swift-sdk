@@ -25,6 +25,8 @@ public struct Post: Codable {
     public var resharedFrom: AllOfPostResharedFrom?
     /** URLs for the post&#x27;s media */
     public var mediaUrls: [String]?
+    /** v2 media URLs for the comment&#x27;s media */
+    public var mediaUrlsV2: [MediaUrlV2]?
     /** Reactions for the post */
     public var reactions: [Reaction]?
     /** Comments for the post */
@@ -37,7 +39,7 @@ public struct Post: Codable {
     public var isUpdateAvatar: Bool?
     public var poll: AllOfPostPoll?
 
-    public init(_id: String, createdAtSeconds: Decimal, author: User, content: String? = nil, isPublic: Bool, reshareable: Bool? = nil, resharedFrom: AllOfPostResharedFrom? = nil, mediaUrls: [String]? = nil, reactions: [Reaction]? = nil, comments: [Comment]? = nil, circles: [Circle]? = nil, deleted: Bool? = nil, isUpdateAvatar: Bool? = nil, poll: AllOfPostPoll? = nil) {
+    public init(_id: String, createdAtSeconds: Decimal, author: User, content: String? = nil, isPublic: Bool, reshareable: Bool? = nil, resharedFrom: AllOfPostResharedFrom? = nil, mediaUrls: [String]? = nil, mediaUrlsV2: [MediaUrlV2]? = nil, reactions: [Reaction]? = nil, comments: [Comment]? = nil, circles: [Circle]? = nil, deleted: Bool? = nil, isUpdateAvatar: Bool? = nil, poll: AllOfPostPoll? = nil) {
         self._id = _id
         self.createdAtSeconds = createdAtSeconds
         self.author = author
@@ -46,6 +48,7 @@ public struct Post: Codable {
         self.reshareable = reshareable
         self.resharedFrom = resharedFrom
         self.mediaUrls = mediaUrls
+        self.mediaUrlsV2 = mediaUrlsV2
         self.reactions = reactions
         self.comments = comments
         self.circles = circles
@@ -63,6 +66,7 @@ public struct Post: Codable {
         case reshareable
         case resharedFrom = "reshared_from"
         case mediaUrls = "media_urls"
+        case mediaUrlsV2 = "media_urls_v2"
         case reactions
         case comments
         case circles

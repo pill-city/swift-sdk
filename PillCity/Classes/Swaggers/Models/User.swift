@@ -17,15 +17,17 @@ public struct User: Codable {
     public var createdAtSeconds: Decimal
     /** URL to the user&#x27;s avatar */
     public var avatarUrl: String?
+    public var avatarUrlV2: MediaUrlV2?
     /** User&#x27;s choice of profile banner. The choices are defined on web frontend. */
     public var profilePic: String?
     /** User&#x27;s displayed/regular name. Can be changed. */
     public var displayName: String?
 
-    public init(_id: String, createdAtSeconds: Decimal, avatarUrl: String? = nil, profilePic: String? = nil, displayName: String? = nil) {
+    public init(_id: String, createdAtSeconds: Decimal, avatarUrl: String? = nil, avatarUrlV2: MediaUrlV2? = nil, profilePic: String? = nil, displayName: String? = nil) {
         self._id = _id
         self.createdAtSeconds = createdAtSeconds
         self.avatarUrl = avatarUrl
+        self.avatarUrlV2 = avatarUrlV2
         self.profilePic = profilePic
         self.displayName = displayName
     }
@@ -34,6 +36,7 @@ public struct User: Codable {
         case _id = "id"
         case createdAtSeconds = "created_at_seconds"
         case avatarUrl = "avatar_url"
+        case avatarUrlV2 = "avatar_url_v2"
         case profilePic = "profile_pic"
         case displayName = "display_name"
     }

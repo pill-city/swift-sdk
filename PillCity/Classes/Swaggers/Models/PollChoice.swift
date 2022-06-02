@@ -17,13 +17,15 @@ public struct PollChoice: Codable {
     public var content: String
     /** URL for the poll choice&#x27;s media */
     public var media: String
+    public var mediaUrlV2: MediaUrlV2?
     /** User who have voted for this poll choice */
     public var voters: [User]?
 
-    public init(_id: String, content: String, media: String, voters: [User]? = nil) {
+    public init(_id: String, content: String, media: String, mediaUrlV2: MediaUrlV2? = nil, voters: [User]? = nil) {
         self._id = _id
         self.content = content
         self.media = media
+        self.mediaUrlV2 = mediaUrlV2
         self.voters = voters
     }
 
@@ -31,6 +33,7 @@ public struct PollChoice: Codable {
         case _id = "id"
         case content
         case media
+        case mediaUrlV2 = "media_url_v2"
         case voters
     }
 

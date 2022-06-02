@@ -20,17 +20,20 @@ public struct Comment: Codable {
     public var content: String?
     /** URLs for the comment&#x27;s media */
     public var mediaUrls: [String]?
+    /** v2 media URLs for the comment&#x27;s media */
+    public var mediaUrlsV2: [MediaUrlV2]?
     /** Whether the comment is deleted */
     public var deleted: Bool?
     /** Nested comments for the comment */
     public var comments: [NestedComment]?
 
-    public init(_id: String, createdAtSeconds: Decimal, author: User, content: String? = nil, mediaUrls: [String]? = nil, deleted: Bool? = nil, comments: [NestedComment]? = nil) {
+    public init(_id: String, createdAtSeconds: Decimal, author: User, content: String? = nil, mediaUrls: [String]? = nil, mediaUrlsV2: [MediaUrlV2]? = nil, deleted: Bool? = nil, comments: [NestedComment]? = nil) {
         self._id = _id
         self.createdAtSeconds = createdAtSeconds
         self.author = author
         self.content = content
         self.mediaUrls = mediaUrls
+        self.mediaUrlsV2 = mediaUrlsV2
         self.deleted = deleted
         self.comments = comments
     }
@@ -41,6 +44,7 @@ public struct Comment: Codable {
         case author
         case content
         case mediaUrls = "media_urls"
+        case mediaUrlsV2 = "media_urls_v2"
         case deleted
         case comments
     }

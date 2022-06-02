@@ -65,15 +65,19 @@ open class CoreAPI {
        - type: http
        - name: bearer
      - examples: [{contentType=application/json, example=[ {
+  "media_urls_v2" : [ null, null ],
   "comments" : [ {
+    "media_urls_v2" : [ null, null ],
     "deleted" : false,
     "comments" : [ {
+      "media_urls_v2" : [ null, null ],
       "deleted" : false,
       "id" : "a3137edb-e629-49ac-b1f1-3343fd97329c",
       "created_at_seconds" : 1.4658129805029452,
       "content" : "Hello, World!",
       "media_urls" : [ "https://pill-city.s3.us-west-2.amazonaws.com/avatars/kt-1646414449.png", "https://pill-city.s3.us-west-2.amazonaws.com/avatars/ika-1631578.png" ]
     }, {
+      "media_urls_v2" : [ null, null ],
       "deleted" : false,
       "id" : "a3137edb-e629-49ac-b1f1-3343fd97329c",
       "created_at_seconds" : 1.4658129805029452,
@@ -85,14 +89,17 @@ open class CoreAPI {
     "content" : "Hello, World!",
     "media_urls" : [ "https://pill-city.s3.us-west-2.amazonaws.com/avatars/kt-1646414449.png", "https://pill-city.s3.us-west-2.amazonaws.com/avatars/ika-1631578.png" ]
   }, {
+    "media_urls_v2" : [ null, null ],
     "deleted" : false,
     "comments" : [ {
+      "media_urls_v2" : [ null, null ],
       "deleted" : false,
       "id" : "a3137edb-e629-49ac-b1f1-3343fd97329c",
       "created_at_seconds" : 1.4658129805029452,
       "content" : "Hello, World!",
       "media_urls" : [ "https://pill-city.s3.us-west-2.amazonaws.com/avatars/kt-1646414449.png", "https://pill-city.s3.us-west-2.amazonaws.com/avatars/ika-1631578.png" ]
     }, {
+      "media_urls_v2" : [ null, null ],
       "deleted" : false,
       "id" : "a3137edb-e629-49ac-b1f1-3343fd97329c",
       "created_at_seconds" : 1.4658129805029452,
@@ -106,6 +113,13 @@ open class CoreAPI {
   } ],
   "author" : {
     "avatar_url" : "https://pill-city.s3.us-west-2.amazonaws.com/avatars/kt-1646414449.png",
+    "avatar_url_v2" : {
+      "processed" : true,
+      "original_url" : "original_url",
+      "width" : 1920,
+      "dominant_color_hex" : "8F4092",
+      "height" : 1080
+    },
     "profile_pic" : "pill1.png",
     "id" : "kt",
     "created_at_seconds" : 1631528113,
@@ -136,15 +150,19 @@ open class CoreAPI {
   "id" : "a3137edb-e629-49ac-b1f1-3343fd97329c",
   "media_urls" : [ "https://pill-city.s3.us-west-2.amazonaws.com/avatars/kt-1646414449.png", "https://pill-city.s3.us-west-2.amazonaws.com/avatars/ika-1631578.png" ]
 }, {
+  "media_urls_v2" : [ null, null ],
   "comments" : [ {
+    "media_urls_v2" : [ null, null ],
     "deleted" : false,
     "comments" : [ {
+      "media_urls_v2" : [ null, null ],
       "deleted" : false,
       "id" : "a3137edb-e629-49ac-b1f1-3343fd97329c",
       "created_at_seconds" : 1.4658129805029452,
       "content" : "Hello, World!",
       "media_urls" : [ "https://pill-city.s3.us-west-2.amazonaws.com/avatars/kt-1646414449.png", "https://pill-city.s3.us-west-2.amazonaws.com/avatars/ika-1631578.png" ]
     }, {
+      "media_urls_v2" : [ null, null ],
       "deleted" : false,
       "id" : "a3137edb-e629-49ac-b1f1-3343fd97329c",
       "created_at_seconds" : 1.4658129805029452,
@@ -156,14 +174,17 @@ open class CoreAPI {
     "content" : "Hello, World!",
     "media_urls" : [ "https://pill-city.s3.us-west-2.amazonaws.com/avatars/kt-1646414449.png", "https://pill-city.s3.us-west-2.amazonaws.com/avatars/ika-1631578.png" ]
   }, {
+    "media_urls_v2" : [ null, null ],
     "deleted" : false,
     "comments" : [ {
+      "media_urls_v2" : [ null, null ],
       "deleted" : false,
       "id" : "a3137edb-e629-49ac-b1f1-3343fd97329c",
       "created_at_seconds" : 1.4658129805029452,
       "content" : "Hello, World!",
       "media_urls" : [ "https://pill-city.s3.us-west-2.amazonaws.com/avatars/kt-1646414449.png", "https://pill-city.s3.us-west-2.amazonaws.com/avatars/ika-1631578.png" ]
     }, {
+      "media_urls_v2" : [ null, null ],
       "deleted" : false,
       "id" : "a3137edb-e629-49ac-b1f1-3343fd97329c",
       "created_at_seconds" : 1.4658129805029452,
@@ -177,6 +198,13 @@ open class CoreAPI {
   } ],
   "author" : {
     "avatar_url" : "https://pill-city.s3.us-west-2.amazonaws.com/avatars/kt-1646414449.png",
+    "avatar_url_v2" : {
+      "processed" : true,
+      "original_url" : "original_url",
+      "width" : 1920,
+      "dominant_color_hex" : "8F4092",
+      "height" : 1080
+    },
     "profile_pic" : "pill1.png",
     "id" : "kt",
     "created_at_seconds" : 1631528113,
@@ -249,6 +277,13 @@ open class CoreAPI {
        - name: bearer
      - examples: [{contentType=application/json, example={
   "avatar_url" : "https://pill-city.s3.us-west-2.amazonaws.com/avatars/kt-1646414449.png",
+  "avatar_url_v2" : {
+    "processed" : true,
+    "original_url" : "original_url",
+    "width" : 1920,
+    "dominant_color_hex" : "8F4092",
+    "height" : 1080
+  },
   "profile_pic" : "pill1.png",
   "id" : "kt",
   "created_at_seconds" : 1631528113,

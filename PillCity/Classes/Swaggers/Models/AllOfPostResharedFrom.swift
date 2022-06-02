@@ -20,15 +20,18 @@ public struct AllOfPostResharedFrom: Codable {
     public var content: String?
     /** URLs for the reshared post&#x27;s media */
     public var mediaUrls: [String]?
+    /** v2 media URLs for the comment&#x27;s media */
+    public var mediaUrlsV2: [MediaUrlV2]?
     /** Whether the reshared post is deleted */
     public var deleted: Bool?
 
-    public init(_id: String, createdAtSeconds: Decimal, author: User, content: String? = nil, mediaUrls: [String]? = nil, deleted: Bool? = nil) {
+    public init(_id: String, createdAtSeconds: Decimal, author: User, content: String? = nil, mediaUrls: [String]? = nil, mediaUrlsV2: [MediaUrlV2]? = nil, deleted: Bool? = nil) {
         self._id = _id
         self.createdAtSeconds = createdAtSeconds
         self.author = author
         self.content = content
         self.mediaUrls = mediaUrls
+        self.mediaUrlsV2 = mediaUrlsV2
         self.deleted = deleted
     }
 
@@ -38,6 +41,7 @@ public struct AllOfPostResharedFrom: Codable {
         case author
         case content
         case mediaUrls = "media_urls"
+        case mediaUrlsV2 = "media_urls_v2"
         case deleted
     }
 
